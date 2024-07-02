@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+/* 公用區 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+
+a {
+    display: block;
+    /* 預設inline改為block */
+    text-decoration: none;
+}
+
+
+body {
+    font-family:
+        /*西文*/
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+        /*中文*/
+        "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    background-color: bisque;
+}
+
+/* Menu區 */
+.All .logo {
+    width: 120px;
+}
+
+
+.All {
+    /* ID用# */
+    display: flex;
+    /* 預設主軸為水平 */
+    justify-content: space-between;
+    /* 主軸(水平)均分貼齊頭尾 */
+    padding: 30px;
+    align-items: center;
+    /* 副軸(垂直)置中 */
+}
+
+
+.All_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.All_menu .menu_work {
+    display: flex;
+}
+
+
+.All_menu .menu_watch {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    /* margin: 15px 0;
+    margin-right: 25px; */
+    margin: 15px 25px 15px 0;
+
+}
+
+.All_menu .menu_watch a {
+    /* 讓menu_work的資料增加邊寬 */
+    margin: 10px 0;
+    color: black;
+    align-self:flex-end;    
+}
+
+
+.All_menu .menu_work a {
+    /* 讓menu_work的資料增加邊寬 */
+    margin: 0 30px;
+    color: black;
+    /* text-align: right; */
+}
+
+.All_menu .menu_work li {
+    border-right: solid 1px;
+}
+
+
+.All_menu .menu_work li:last-child {
+    border-right: none;
+    margin: 0;
+}
