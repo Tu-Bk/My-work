@@ -54,6 +54,10 @@ a {
 }
 
 /* 外框架區 */
+#box{
+    background-color: rgba(89, 97, 98,0.5);
+}
+
 .box__header {
     display: flex;
     flex-direction: column;
@@ -67,6 +71,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: center;
+
 }
 
 .box__item {
@@ -74,7 +79,15 @@ a {
     box-shadow: 1px 1px 1px #444;
     border-radius: 20px;
     overflow: hidden;
-}
+    }
+
+
+    .box__item div {
+        color: #444;
+        background-color: #d58a8a;
+        max-width: 400px;
+        padding: 10px 10px;
+    }
 
 /* 內容區 */
 .box__item figure {
@@ -88,11 +101,13 @@ a {
     object-fit: cover;
 }
 
-.box__item div {
-    color: #444;
+.box__item h2{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-.box__list p {
+.box__item p {
     font-size: 0.8rem;
     /* 字數太多要省略 */
     overflow: hidden;
@@ -100,4 +115,8 @@ a {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+    }
+
+.box__list div:hover {
+    background-color: rgba(0, 0, 0, 0.5);
 }
