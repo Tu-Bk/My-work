@@ -59,17 +59,22 @@ a {
     justify-content: space-between;
     background-color: #619dbf;
 }
-.menu__box{
+
+.menu__box {
     align-content: center;
-    }
+}
 
 .menu__box ul {
+
     display: flex;
 }
 
-.menu__box a{
-    padding: 10px;
-    color: #444
+.menu__box a {
+    margin: 20px 30px 0 20px;
+    padding: 10px 10px 10px 10px;
+    color: #444;
+    box-shadow: 1px 1px 10px #444;
+    border-radius: 20px;
 }
 
 
@@ -98,17 +103,27 @@ a {
     box-shadow: 1px 1px 1px #444;
     border-radius: 20px;
     overflow: hidden;
+    max-width: 400px;
 }
 
 
 .box__item div {
     color: #444;
     background-color: #d58a8a;
-    max-width: 400px;
     padding: 10px 10px;
 }
 
 /* 內容區 */
+.menu__box a {
+    background-color: rgb(45, 45, 45, 0.5);
+    color: white;
+}
+
+.menu__box a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #444;
+}
+
 .box__item figure {
     height: 40vh;
 }
@@ -137,5 +152,5 @@ a {
 }
 
 .box__list div:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(135, 106, 106, 0.5);
 }
