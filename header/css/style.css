@@ -65,7 +65,6 @@ a {
 }
 
 .menu__box ul {
-
     display: flex;
 }
 
@@ -75,6 +74,11 @@ a {
     color: #444;
     box-shadow: 1px 1px 10px #444;
     border-radius: 20px;
+}
+
+.menu__search{
+    display: flex;
+    justify-content: flex-end;
 }
 
 
