@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+/* 重置所有標籤的樣式 */
+/* 『*』代表所有標籤的意思 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 不累加內距paddin與邊框 border*/
+}
+
+/* 重置字體 */
+body {
+    font-family:
+        /*西文*/
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+        /*中文*/
+        "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    /* background-color: rgb(116, 107, 95); */
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 重置圖片 */
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 重置連接 */
+a {
+    display: block
+        /* 預設inline改為block */
+    ;
+    text-decoration: none;
+}
+
+/* 框架區 */
+#menu {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(143, 168, 211, 0.5);
+}
+
+.menu__logo {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+#menu nav {
+    align-content: center;
+}
+
+.menu__menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menu__menu li {
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+}
+
+.menu__menu li a {
+    color: #ffffff;
+    box-shadow: 1px 1px 10px #444;
+    border-radius: 99px;
+    padding: 8px;
+}
+
+.menu__menu li a:hover {
+    background-color: #444;
+}
+
+.section__1 {
+    width: 1920px;
+    height: 800px;
+    max-width: 1920px;
+    max-height: 1920px;
+    background-image: url(../image/627f10b8ace6a2af7e17529a5e17d84e.jfif);
+    background-size: 100% 100%;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+}
+
+.div__1 {
+    width: 1920px;
+    height: 800px;
+    max-width: 1920px;
+    max-height: 1920px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.div__1 p{
+    box-shadow: 1px 1px 5px #444;
+    border-radius: 20px;
+    writing-mode: vertical-lr;
+    margin: 200px 500px 200px 0;
+    padding: 10px;
+}
+
+.div__1 img{
+    max-width: 300px;
+    max-height: 300px;
+    margin: 0 0 200px 350px;
+}
+
