@@ -150,17 +150,77 @@ a {
 
 
 /* 左半邊區域的側邊欄位↓↓ */
-
-
-.decorative__block_box_sidebar {
+.decorative__block_box_sidebar-1 {
+    max-width: 600px;
+    max-height: 600px;
+    width: 300px;
+    display: flex;
+    border: 2px solid #444;
+    border-radius: 99px;
     display: none;
 }
 
+.decorative__block_box_sidebar-1 ul {
+    padding: 40px 40px;
+}
+
+.decorative__block_box_sidebar-2 {
+    max-width: 600px;
+    max-height: 600px;
+    width: 300px;
+    display: flex;
+    border: 2px solid #444;
+    border-radius: 99px;
+    display: none;
+}
+
+.decorative__block_box_sidebar-2 ul {
+    padding: 40px 40px;
+}
 
 
+.decorative__block_box_sidebar-3 {
+    max-width: 600px;
+    max-height: 600px;
+    width: 300px;
+    display: flex;
+    border: 2px solid #444;
+    border-radius: 99px;
+    display: none;
+}
+
+.decorative__block_box_sidebar-3 ul {
+    padding: 40px 40px;
+}
 
 
+.decorative__block_box_sidebar-4 {
+    max-width: 600px;
+    max-height: 600px;
+    width: 300px;
+    display: flex;
+    border: 2px solid #444;
+    border-radius: 99px;
+    display: none;
+}
 
+.decorative__block_box_sidebar-4 ul {
+    padding: 40px 40px;
+}
+
+.decorative__block_box_sidebar-5 {
+    max-width: 600px;
+    max-height: 600px;
+    width: 300px;
+    display: flex;
+    border: 2px solid #444;
+    border-radius: 99px;
+    display: none;
+}
+
+.decorative__block_box_sidebar-5 ul {
+    padding: 40px 40px;
+}
 
 
 
