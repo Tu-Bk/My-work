@@ -25,15 +25,15 @@
         <div class="decorative__block__All_box">
             <div class="decorative__block_box">
                 <ul class="ul-1">
-                    <li><a href="#" id="click_box_1"><img src="./image/chocolate 1.png" alt="">口味</a></li>
-                    <li><a href="#" id="click_box_2"><img src="./image/acai 2.png" alt="">配料</a></li>
-                    <li><a href="#" id="click_box_3"><img src="./image/text-recognising 3.png" alt="">文字</a></li>
-                    <li><a href="#" id="click_box_4"><img src="./image/image4.png" alt="">裝飾</a></li>
-                    <li><a href="#" id="click_box_5"><img src="./image/palette 5.png" alt="">模板</a></li>
+                    <li><a href="#" class="click_box"><img src="./image/chocolate 1.png" alt="">口味</a></li>
+                    <li><a href="#" class="click_box"><img src="./image/acai 2.png" alt="">配料</a></li>
+                    <li><a href="#" class="click_box"><img src="./image/text-recognising 3.png" alt="">文字</a></li>
+                    <li><a href="#" class="click_box"><img src="./image/image4.png" alt="">裝飾</a></li>
+                    <li><a href="#" class="click_box"><img src="./image/palette 5.png" alt="">模板</a></li>
                 </ul>
             </div>
             <div class="decorative__block_box_sidebar_All">
-                <div class="decorative__block_box_sidebar-1">
+                <div class="decorative__block_box_sidebar decorative__block_box_sidebar-1">
                     <ul class="">
                         <li><a href="#"><img src="./image/chocolate 1.png" alt="">口味</a></li>
                         <li><a href="#"><img src="./image/acai 2.png" alt="">配料</a></li>
@@ -43,7 +43,7 @@
                     </ul>
                 </div>
 
-                <div class="decorative__block_box_sidebar-2">
+                <div class="decorative__block_box_sidebar decorative__block_box_sidebar-2">
                     <ul class="">
                         <li><a href="#"><img src="./image/chocolate 1.png" alt="">口味</a></li>
                         <li><a href="#"><img src="./image/acai 2.png" alt="">配料</a></li>
@@ -53,7 +53,7 @@
                     </ul>
                 </div>
 
-                <div class="decorative__block_box_sidebar-3">
+                <div class="decorative__block_box_sidebar decorative__block_box_sidebar-3">
                     <ul class="">
                         <li><a href="#"><img src="./image/chocolate 1.png" alt="">口味</a></li>
                         <li><a href="#"><img src="./image/acai 2.png" alt="">配料</a></li>
@@ -63,7 +63,7 @@
                     </ul>
                 </div>
 
-                <div class="decorative__block_box_sidebar-4">
+                <div class="decorative__block_box_sidebar decorative__block_box_sidebar-4">
                     <ul class="">
                         <li><a href="#"><img src="./image/chocolate 1.png" alt="">口味</a></li>
                         <li><a href="#"><img src="./image/acai 2.png" alt="">配料</a></li>
@@ -73,7 +73,7 @@
                     </ul>
                 </div>
 
-                <div class="decorative__block_box_sidebar-5">
+                <div class="decorative__block_box_sidebar decorative__block_box_sidebar-5">
                     <ul class="">
                         <li><a href="#"><img src="./image/chocolate 1.png" alt="">口味</a></li>
                         <li><a href="#"><img src="./image/acai 2.png" alt="">配料</a></li>
@@ -170,21 +170,40 @@
         }); */
 
         //正式環境
-        let block_box = Array.from(document.getElementsByClassName("decorative__block_box"));
-        let outer_box = Array.from(document.getElementsByClassName("decorative__block_box_sidebar_All"));
-        block_box.forEach((outer_box, in_box) => {
-            block_box.addEventListener("click", () => {
-                who_click(block_box, in_box);
-                who_click(outer_box, in_box);
-            }
-            )
+        //函式物件的被點擊
+        let outer_box = Array.from(document.getElementsByClassName("click_box"));
+        //函式物件被加入資料
+        let block_box = Array.from(document.getElementsByClassName("decorative__block_box_sidebar"));
+        outer_box.forEach((blockbox, usebox) => {
+            blockbox.addEventListener("click", () => {
+                console.log('clicked');
+                //套用下面()的函式資料
+                who_click(outer_box, usebox);
+                who_click(block_box, usebox);
+            })
         })
 
-        function who_click(out_box, inbox) {
-            out_box.forEach((who) => {
+        console.log(outer_box);
+        console.log(block_box);
+
+
+        //上面函式丟下來跑回圈
+
+        //函式執行刪除及加入('alert')
+        function who_click(outbox, inbox) {
+            //此處的outbox為outer_box的連接點
+            //inbox為outer_box的陣列[i]的位置
+            outbox.forEach((who) => {
+                //刪除上面丟下來的資料的 ('alert')
                 who.classList.remove('alert');
-            })
-            out_box[inbox].classList.add("alert");
+            });
+            console.log(outbox[inbox]);
+            //在指定的 outbox[inbox] inbox裡面加入("alert")
+            outbox[inbox].classList.add("alert");
+        }
+
+        function add(a, b) {
+            return a + b;
         }
 
 

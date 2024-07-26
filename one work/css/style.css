@@ -202,13 +202,12 @@ a {
     padding: 20px;
 }
 
-.decorative__block_box .ul-1 a alert {
-    background-color: rgb(131, 178, 205);
-    color: red;
+.click_box.alert{
+    background-color: rgb(138, 190, 220);
 }
 
 
-.decorative__block_box_sidebar-1 .decorative__block_box_sidebar-1 alert  {
+.decorative__block_box_sidebar.alert {
     display: block;
 }
 
