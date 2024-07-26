@@ -295,7 +295,7 @@ a {
 .decorative__block_box_3 {
     display: flex;
     justify-content: center;
-    margin: 5px 0 0 0;
+    margin: 10px 0 0 0;
 }
 
 .decorative__block_box_3 ul {
@@ -305,7 +305,7 @@ a {
 
 .decorative__block_box_3 li {
     padding: 0 50px;
-    align-content: end;
+    align-content: flex-end;
 }
 
 .decorative__block_box_3_a {

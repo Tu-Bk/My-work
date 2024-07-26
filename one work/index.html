@@ -172,12 +172,20 @@
         //正式環境
         let block_box = Array.from(document.getElementsByClassName("decorative__block_box"));
         let outer_box = Array.from(document.getElementsByClassName("decorative__block_box_sidebar_All"));
-        function who_click(block_box, outer_box) {
+        block_box.forEach((outer_box, in_box) => {
+            block_box.addEventListener("click", () => {
+                who_click(block_box, in_box);
+                who_click(outer_box, in_box);
+            }
+            )
+        })
 
+        function who_click(out_box, inbox) {
+            out_box.forEach((who) => {
+                who.classList.remove('alert');
+            })
+            out_box[inbox].classList.add("alert");
         }
-
-
-
 
 
     </script>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- onload="btnTabArr[localStorage.getItem('activeIndex')].click()" -->
+    <!-- 直接幫用戶點擊到上次使用的頁籤 -->
+    <main>
+        <section id="content">
+            <div class="folder">
+                <ul class="tab__box">
+                    <li><button class="btn__tab active" type="button">注意事項</button></li>
+                    <li><button class="btn__tab" type="button">購買提醒</button></li>
+                    <li><button class="btn__tab" type="button">取票方式</button></li>
+                    <li><button class="btn__tab" type="button">活動介紹</button></li>
+                    <li><button class="btn__tab" type="button">立即購買</button></li>
+                </ul>
+                <div class="tabCon__box">
+                    <div class="tab__content active">
+                        <p>注意事項</p>
+                    </div>
+                    <div class="tab__content">
+                        <p>購買提醒</p>
+                    </div>
+                    <div class="tab__content">
+                        <p>取票方式</p>
+                    </div>
+                    <div class="tab__content">
+                        <p>活動介紹</p>
+                    </div>
+                    <div class="tab__content">
+                        <p>立即購買</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        // 切換頁籤
+        // Array.from => 類似陣列的物件轉換成陣列
+        let btnTabArr = Array.from(document.getElementsByClassName('btn__tab'));
+        let tabContentArr = Array.from(document.getElementsByClassName('tab__content'));
+        // 加eventListener
+        btnTabArr.forEach((btnTabEle, btArrIndex) => {
+            btnTabEle.addEventListener("click", () => {
+                switchActive(tabContentArr, btArrIndex);
+                switchActive(btnTabArr, btArrIndex);
+                // 把頁籤的index存在localStorage
+                localStorage.setItem("activeIndex", btArrIndex);
+            });
+
+            // btnTabEle.onclick = myFunc;
+
+            // btnTabEle.onclick = ()=>{
+            //     console.log(btArrIndex);
+            // };
+
+
+        });
+
+
+
+        function myFunc(btArrIndex) {
+            console.log(btArrIndex);
+            // switchActive(tabContentArr, btArrIndex);
+            // switchActive(btnTabArr, btArrIndex);
+            // 把頁籤的index存在localStorage
+            // localStorage.setItem("activeIndex", btArrIndex);
+        }
+
+        // onload
+        // 如果存有上次點擊到的頁籤則直接跳轉到那頁
+        if (localStorage.hasOwnProperty("activeIndex")) {
+            switchActive(tabContentArr, localStorage.getItem("activeIndex"));
+            switchActive(btnTabArr, localStorage.getItem("activeIndex"));
+            // console.log(localStorage.getItem("activeIndex"));
+        }
+
+        // 切換active的元素，arrToSwitch => 要修改的dom元素陣列，targetIndex => 要被加上active的index
+        function switchActive(arrToSwitch, targetIndex) {
+            // 清除陣列中每個item的class: active
+            arrToSwitch.forEach((arrEle) => {
+                arrEle.classList.remove('active');
+            });
+            // 為陣列中指定index的元素加上class: active
+            arrToSwitch[targetIndex].classList.add('active');
+        }
+
+    </script>
+</body>
+
+</html>
