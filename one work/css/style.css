@@ -305,7 +305,7 @@ a {
     height: auto;
     position: absolute;
     bottom: 0;
-    right: 0    ;
+    right: 0;
 }
 
 .div__box a {
@@ -358,6 +358,7 @@ a {
     margin: 10px 0 0 0;
     width: 100%;
     /* height: 10vh; */
+    overflow: auto;
 }
 
 .decorative__block_box_3 ul {
@@ -370,13 +371,17 @@ a {
     align-content: flex-end;
 }
 
+.decorative__block_box_3 a {
+    color: black;
+    /* width: 100%;
+    height: auto; */
+}
+
 .decorative__block_box_3_a {
     padding: 0 60px;
 }
 
-.decorative__block_box_3 a {
-    color: black;
-}
+
 
 .decorative__block_box_3 p {
     display: flex;
