@@ -62,7 +62,7 @@ a {
     max-height: 850px; */
     /* height: 1800px; */
     /* height: auto; */
-    /* height: 100vh; */
+    height: 100vh;
     width: 100%;
     background-image: url(..//image/image\ 9.png);
     background-position: center;
@@ -121,6 +121,8 @@ a {
     /* height: auto; */
     height: 100vh;
     margin: 30px 0 0 0;
+    /* padding: 0 200px; */
+
 }
 
 /* ↓這裡曾經有出現重點問題 ↓*/
@@ -129,7 +131,8 @@ a {
     /* max-height: 650px;
     max-width: 1900px; */
     /* margin: 0 0 0 60px; */
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: space-between;
     position: relative;
     width: 100%;
     /* height: auto; */
@@ -137,18 +140,19 @@ a {
     /* box-sizing: border-box; */
     /* max-width:  1200px;
     max-height: 600px; */
+    margin: 0 180px 0 200px;
 }
 
 /* 左半邊區域↓↓ */
 
 .decorative__block_box {
-    margin: 0 20px 0 0;
+    margin: 0 0px 0 0;
     border: 2px solid #444;
     border-radius: 10px 0 0 10px;
     /* position: relative; */
     height: auto;
     overflow: auto;
-    position: relative;
+    /* position: relative; */
 }
 
 .ul-1 {
@@ -182,14 +186,8 @@ a {
 
 
 /* .decorative__block_box_sidebar_All {
-    width: 300px;
-    height: 450px;
-    position: absolute;
-    border: 2px solid #444;
-    border-radius: 99px;
-    display: none;
-    left: 211px;
-    left: 405px;
+position: relative;
+border: 2px solid #b00000;
 } */
 
 .decorative__block_box_sidebar-1,
@@ -209,9 +207,12 @@ a {
     display: none;
     position: absolute;
     /* position: static; */
-    left: 160px;
+    /* left: 215px; */
+    left: 0;
     background-color: rgb(196, 138, 138);
     overflow: auto;
+    z-index: 3;
+    margin: 0 65px;
 }
 
 .decorative__block_box_sidebar-1 ul,
@@ -284,7 +285,7 @@ a {
     max-height: 600px;
     width: 1100px;
     height: 600px; */
-    width: 70%;
+    width: 80%;
     height: 100%;
     border: 2px solid #444;
     border-radius: 10px;
@@ -359,6 +360,7 @@ a {
     width: 100%;
     /* height: 10vh; */
     overflow: auto;
+    height: auto;
 }
 
 .decorative__block_box_3 ul {
@@ -399,6 +401,7 @@ a {
     display: flex;
     justify-content: center;
     width: 100%;
+    height: auto;
     /* height: 10vh; */
 }
 
